@@ -1,0 +1,97 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - order_food
+  - menu
+  - inquire_opening_hours
+  - ask_delivery_options
+  - provide_location
+  - thank
+  - ask_contact_info
+  - canteen_option_south
+  - canteen_option_north
+  - canteen_option_east
+  - canteen_option_west
+  - ask_canteen_to_order
+  - choose_canteen
+
+# slots:
+#   - canteen:
+#     type: text
+#     influence_conversation_false
+#     mapping:
+#     - type: from_entity
+#       entity: canteen
+#   - item
+#   type: text
+#     influence_conversation_false
+#     mapping:
+#     - type: from_entity
+#       entity: item
+slots:
+  chosen_canteen:
+    type: text
+
+actions:
+ # - action_hello_world
+  - utter_choose_canteen_confirmation
+entities:
+  - location
+  - canteen_name
+
+
+responses:
+  utter_greet:
+    - text: "Hello! Welcome to MNNIT Bites. How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_order_food:
+    - text: "Sure, I can help you order delicious food."
+
+  utter_menu:
+    - text: "Here's the menu for our food offerings. What can I get for you?"
+
+  utter_inquire_opening_hours:
+    - text: "Our opening hours are [Opening hours]. Feel free to place your order during these times."
+
+  utter_ask_delivery_options:
+    - text: "Yes, we offer delivery services. You can get food delivered right to your doorstep."
+
+  utter_provide_location:
+    - text: "Please provide your delivery location or address so we can ensure a timely delivery."
+
+  utter_thank:
+    - text: "You're welcome! If you need anything else, feel free to ask."
+
+  utter_ask_contact_info:
+    - text: "You can reach us at [Contact number]. Feel free to call for any assistance."
+
+  utter_canteen_option_south:
+    - text: "The South Canteen offers a variety of delicious food options. What would you like from there?"
+
+  utter_canteen_option_north:
+    - text: "At the North Canteen, you'll find a diverse range of dishes. What can I help you order?"
+
+  utter_canteen_option_east:
+    - text: "The East Canteen has a great selection of food. What would you like to have from there?"
+
+  utter_canteen_option_west:
+    - text: "The West Canteen offers tasty food options. What can I assist you in ordering?"
+  
+  utter_ask_canteen_to_order:
+    - text: "Sure! You can order food from the following canteens: North Canteen, South Canteen, East Canteen, and West Canteen. Which one would you like to choose?"
+
+  utter_choose_canteen_confirmation:
+    - text: "Great choice! You've chosen the {chosen_canteen} Canteen for your order."
+  
+  utter_ask_canteen:
+    - text: "Which canteen do you choose to order from?
+             1) north canteen  2) south canteen   3) west canteen    4) east canteen"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
