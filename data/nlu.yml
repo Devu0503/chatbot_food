@@ -1,0 +1,106 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - hey there
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you later
+    - take care
+
+- intent: order_food
+  examples: |
+    - I want to order food
+    - Can I place an order?
+    - How do I order food?
+    - I'm hungry, what can I order?
+
+- intent: menu
+  examples: |
+    - What's on the menu?
+    - Show me the menu
+    - What can I eat?
+    - Any food suggestions?
+
+- intent: inquire_opening_hours
+  examples: |
+    - When do you open?
+    - What are your opening hours?
+    - What time can I order?
+    - Are you currently open?
+
+- intent: ask_delivery_options
+  examples: |
+    - Do you offer delivery?
+    - Can I get food delivered?
+    - How does your delivery work?
+    - Is there a delivery fee?
+
+- intent: provide_location
+  examples: |
+    - I am at [teliyarganj](location)
+    - My address is [teliyarganj](location)
+    - Deliver to [teliyarganj](location)
+  
+- intent: thank
+  examples: |
+    - Thank you
+    - Thanks a lot
+    - Appreciate it
+    - Thanks for your help
+
+- intent: ask_contact_info
+  examples: |
+    - What's your contact number?
+    - How can I contact you?
+    - Do you have a phone number?
+    - How do I reach you?
+
+- intent: canteen_option_north
+  examples: |
+    - What's available at the North Canteen?
+    - Tell me about the North Canteen menu
+    - Food options at the North Canteen
+    - What can I get at the North Canteen?
+
+- intent: canteen_option_south
+  examples: |
+    - What's on the menu at the South Canteen?
+    - South Canteen food choices
+    - Tell me about the South Canteen offerings
+    - Can I order from the South Canteen?
+
+- intent: canteen_option_east
+  examples: |
+    - What's available at the East Canteen?
+    - East Canteen menu details
+    - What can I eat at the East Canteen?
+    - Tell me about the East Canteen food
+
+- intent: canteen_option_west
+  examples: |
+    - What's on the menu at the West Canteen?
+    - West Canteen food options
+    - Can I get something from the West Canteen?
+    - Tell me about the West Canteen offerings
+
+
+
+- intent: choose_canteen
+  examples: |
+    - I want to order from the [North Canteen](canteen_name)
+    - Let's go with the South Canteen(canteen_name)
+    - [East Canteen] (canteen_name)sounds good to me
+    - I choose the [West Canteen](canteen_name)
+    - [north canteen](canteen_name)
+    - [south canteen](canteen_name)
+    - [west canteen](canteen_name)
+    - [east canteen](canteen_name)
+   
